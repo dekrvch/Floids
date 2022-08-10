@@ -80,7 +80,7 @@ class World{
         container.appendChild(stats.domElement);
 
         // Objects
-        let agents = new Agents(200);
+        let agents = new Agents(700);
         let hunter = new Hunter();
         agents.setHunter(hunter);
         updatables.push(agents, hunter);
