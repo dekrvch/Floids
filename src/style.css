@@ -1,0 +1,48 @@
+body {
+    /* remove margins and scroll bars */
+    margin: 0;
+    overflow: hidden;
+
+    /* style text */
+    text-align: center;
+    font-size: 12px;
+    font-family: Sans-Serif;
+
+    /* color text */
+    color: #444;
+}
+
+
+
+#scene-container {
+    /* tell our scene container to take up the full page */
+    position: fixed;
+    width: 100%;
+    height: 100%;
+
+    /*
+      Set the container's background color to the same as the scene's
+      background to prevent flashing on load
+    */
+    background-color: #252C38;
+}
+
+.text{
+    position: absolute;
+    width: 38%;
+    height: auto;
+    margin: 20pt;
+    text-align: left;
+    text-justify: inter-word;
+    color: Gainsboro;
+
+    overflow-x: hidden;
+    overflow-y: auto;
+
+    font-family: Helvetica, sans-serif;
+    font-size: 10pt;
+    line-height: 1.7;
+}
+.text img{
+    padding: 15px;
+}

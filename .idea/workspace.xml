@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="eac6968f-a6d6-4dff-b465-e734a94c9d32" name="Changes" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="package.json" />
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2CKmaPiItemzJRhtkL8bIYmJnTz" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;javascript.nodejs.core.library.configured.version&quot;: &quot;16.16.0&quot;,
+    &quot;javascript.nodejs.core.library.typings.version&quot;: &quot;16.11.45&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/u0118641/OneDrive/Git/threejs-webpack-starter-master&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.editor.code.editing&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\u0118641\OneDrive\Git\particles\src" />
+      <recent name="C:\Users\u0118641\OneDrive\Git\particles" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Node.js.Grid.js">
+    <configuration name="Grid.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/src/world/Grid.js" working-dir="$PROJECT_DIR$/src/world">
+      <method v="2" />
+    </configuration>
+    <configuration name="Grid.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/src/world/Grid.js" working-dir="$PROJECT_DIR$/src/world">
+      <method v="2" />
+    </configuration>
+    <configuration name="Particles.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/src/world/Particles.js" working-dir="$PROJECT_DIR$/src/world">
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Node.js.Grid.js" />
+        <item itemvalue="Node.js.Particles.js" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="eac6968f-a6d6-4dff-b465-e734a94c9d32" name="Changes" comment="" />
+      <created>1658559714325</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1658559714325</updated>
+      <workItem from="1658559728690" duration="608000" />
+      <workItem from="1658568591958" duration="6644000" />
+      <workItem from="1658576803681" duration="11658000" />
+      <workItem from="1658593760910" duration="33000" />
+      <workItem from="1658597241436" duration="13201000" />
+      <workItem from="1658782960198" duration="117000" />
+      <workItem from="1658783147554" duration="69862000" />
+      <workItem from="1658953405324" duration="19363000" />
+      <workItem from="1659015519103" duration="53597000" />
+      <workItem from="1659470405089" duration="17984000" />
+      <workItem from="1659644990123" duration="7661000" />
+      <workItem from="1659719681035" duration="20055000" />
+      <workItem from="1659888126665" duration="5273000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

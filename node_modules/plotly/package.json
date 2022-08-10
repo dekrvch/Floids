@@ -1,0 +1,30 @@
+{
+  "name": "plotly",
+  "version": "1.0.6",
+  "description": "Simple node.js wrapper for the plot.ly API",
+  "main": "index.js",
+  "devDependencies": {
+    "random-signal": "0.0.2",
+    "tap": "^0.4.13",
+    "tape": "^3.0.3"
+  },
+  "scripts": {
+    "test": "tap test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/alexander-daniel/plotly-nodejs.git"
+  },
+  "keywords": [
+    "plotting",
+    "graphs",
+    "interactive",
+    "data",
+    "visualization"
+  ],
+  "author": "Alexander Daniel <alex@lesinstruments.com> (http://lesinstruments.com/)",
+  "license": "MIT",
+  "dependencies": {
+    "mkdirp": "~0.5.0"
+  }
+}

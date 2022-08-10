@@ -1,0 +1,1 @@
+import"./style.css";import{World}from"./World/World.js";function main(){document.querySelector("#scene-container")}main();
