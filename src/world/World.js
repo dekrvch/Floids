@@ -6,6 +6,7 @@ import {
     Clock,
     Vector2,
     Vector3,
+    TextureLoader,
     LinearToneMapping,
     ReinhardToneMapping,
     ACESFilmicToneMapping,
@@ -38,7 +39,9 @@ class World{
 
         // Scene
         scene = new Scene();
-        scene.background = new Color('#252C38');
+        const loader = new TextureLoader();
+        let backgroundTexture = loader.load('https://raw.githubusercontent.com/dekrvch/Floids/main/src/assets/background.svg');
+        scene.background = backgroundTexture;
         // Camera
         camera = new PerspectiveCamera(
             50, // fov = Field Of View

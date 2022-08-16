@@ -23,7 +23,9 @@ body {
       Set the container's background color to the same as the scene's
       background to prevent flashing on load
     */
-    background-color: #252C38;
+    background-image: url(https://raw.githubusercontent.com/dekrvch/Floids/main/src/assets/background.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .text{
