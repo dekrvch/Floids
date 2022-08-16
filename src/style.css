@@ -1,7 +1,6 @@
 body {
     /* remove margins and scroll bars */
     margin: 0;
-    overflow: hidden;
 
     /* style text */
     text-align: center;
@@ -31,6 +30,8 @@ body {
     position: absolute;
     width: 38%;
     height: auto;
+    overflow: scroll;
+    
     margin: 20pt;
     text-align: left;
     text-justify: inter-word;

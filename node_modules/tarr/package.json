@@ -1,0 +1,29 @@
+{
+  "bugs": {
+    "url": "https://github.com/isaacs/node-tar/issues"
+  },
+  "dependencies": {
+    "block-stream": "*",
+    "fstream": ">=1.0.12",
+    "inherits": "2"
+  },
+  "description": "tarr for node",
+  "devDependencies": {
+    "graceful-fs": "^3.0.2",
+    "mkdirp": "^0.5.0",
+    "rimraf": "1.x",
+    "tap": "0.x"
+  },
+  "homepage": "https://github.com/isaacs/node-tar#readme",
+  "license": "BSD",
+  "main": "tar.js",
+  "name": "tarr",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/isaacs/node-tar.git"
+  },
+  "scripts": {
+    "test": "tap test/*.js"
+  },
+  "version": "1.1.0"
+}

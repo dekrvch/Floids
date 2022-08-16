@@ -31,6 +31,7 @@
   },
   "devDependencies": {
     "stats.js": "^0.17.0",
+    "surge": "^0.23.1",
     "webpack": "^5.74.0"
   }
 }
