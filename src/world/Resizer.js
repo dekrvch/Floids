@@ -5,11 +5,16 @@ const setSize = (container, camera, renderer) => {
     renderer.setPixelRatio(window.devicePixelRatio);
 }
 
+let initialAspect
+
 class Resizer {
     constructor(container, camera, renderer) {
+        initialAspect = container.clientWidth / container.clientHeight;
+        this.aspect = 1;
         setSize(container, camera, renderer);
         window.addEventListener("resize", _ => {
             setSize(container, camera, renderer);
+            this.aspect = container.clientWidth / container.clientHeight / initialAspect;
         });
     }
 }

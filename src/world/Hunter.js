@@ -1,5 +1,5 @@
 import {Color, ConeBufferGeometry, Mesh, MeshBasicMaterial, Vector3} from "three";
-import {pointInSphere} from "./helpers/pointInSphere";
+import {pointInSphere} from "../pointInSphere";
 
 let pos;
 let vel;
@@ -15,12 +15,12 @@ let quickVec2 = new Vector3;
 class Hunter {
     constructor() {
         this.DESIRED_SPEED = 0.25;  // restores this speed with time
-        this.TAU_SPEED = 0.0005;     // how quick to restore the desired speed
+        this.TAU_SPEED = 0.01;     // how quick to restore the desired speed
 
         this.CHASE_RADIUS = 0.5;   // sees prey within this radius
         this.HABITAT_RADIUS = 1.0;    // gets pushed back if outside of habitat
 
-        this.CHASE_FACTOR = 0.2;
+        this.CHASE_FACTOR = 0.3;
         this.HABITAT_FACTOR = 1;
 
         this.enable = true;
@@ -62,10 +62,10 @@ class Hunter {
         for (let p = 0; p < nPrey; p++) {
             quickVec2.fromArray(preyPos, p * 3);
             quickVec2.addScaledVector(pos, -1); // proportional to distance
-            quickVec1.addScaledVector(quickVec2, 1/quickVec2.lengthSq()); // force proportional to 1/distance
+            quickVec1.addScaledVector(quickVec2, 1/(quickVec2.lengthSq()+0.0025)); // force proportional to 1/distance, 0.01 prevents jerking
         }
         if (nPrey > 0){
-            quickVec1.multiplyScalar(1 / Math.min(nPrey, 10));
+            quickVec1.multiplyScalar(1 / Math.max(nPrey, 10));
         }
         quickVec1.clampLength(0, 3);
         return quickVec1;

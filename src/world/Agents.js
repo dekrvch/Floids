@@ -9,8 +9,8 @@ import {
     UniformsLib
 } from 'three';
 import {UnitGrid} from "./Grid";
-import {pointInSphere} from "./helpers/pointInSphere";
-import { vertexShader, fragmentShader } from './helpers/shaders'
+import {pointInSphere} from "../pointInSphere";
+import { vertexShader, fragmentShader } from '../shaders'
 
 // Vectors used to assist the calculations
 let posVec = new Vector3;
@@ -25,9 +25,9 @@ class Agents{
         this.TAU_SPEED = 0.01;     // how quick to restore the desired speed
 
         this.FIRE_CYCLE = 3;     // how often to fire, s
-        this.NUDGE_FACTOR = 0.05;
+        this.NUDGE_FACTOR = 0.01;
         this.NUDGE_LIMIT = 3;           // max number of times an agent can nudge its clock per frame
-        this.CONFUSION_FACTOR = 0.05;   // confuse the clock when fleeing
+        this.CONFUSION_FACTOR = 0.2;   // confuse the clock when fleeing
 
         this.VISIBLE_RADIUS = 0.15;   // align and cohere with other agents in this range
         this.PROTECTED_RADIUS = 0.05; // avoid other agents in this range
@@ -35,8 +35,8 @@ class Agents{
         this.HABITAT_RADIUS = 0.8;    // gets pushed back if outside of habitat
         this.USE_GRID = true;
 
-        this.ALIGN_FACTOR = 0.1;
-        this.COHERE_FACTOR = 4;
+        this.ALIGN_FACTOR = 0.05;
+        this.COHERE_FACTOR = 5;
         this.AVOID_FACTOR = 30;
         this.FLEE_FACTOR = 3;  // flee from hunter
         this.HABITAT_FACTOR = 0.1;
@@ -63,12 +63,13 @@ class Agents{
         this.uniforms = {
             fireCycle:      {value: this.FIRE_CYCLE},
             size:           { value: 0.4 },
-            bodyColor:      { value: new Color(0x33ad7c)},
-            fireColor:      { value: new Color(0x8b6cfa)},
+            bodyColor:      { value: new Color(0x70ffa1)},
+            fireColor:      { value: new Color(0xff849f)},
             bodySize:       { value: 0.03},
             bodyOpacity:    { value: 0.5},
-            fireR1: {value : 0.020},
-            fireR2: {value : 0.002}
+            fireR1: {value : 0.015},
+            fireR2: {value : 0.0015},
+            aspect: {value: 1}
         }
         let shaderMaterial =  new ShaderMaterial({
             uniforms: this.uniforms,
@@ -127,7 +128,6 @@ class Agents{
         // Update mesh
         this.mesh.geometry.attributes.position.needsUpdate = true;
         this.mesh.geometry.attributes.clock.needsUpdate = true;
-        this.uniforms.fireCycle.value = this.FIRE_CYCLE;
     }
     fire(ID, delta, neighborsPerID){
         this.clockArray[ID] += delta;
@@ -195,7 +195,7 @@ class Agents{
     flee(ID){
         quickVec1.set(0, 0, 0);
         if (this.fleeing.includes(ID)) {
-            this.clockArray[ID] += -this.FIRE_CYCLE*this.CONFUSION_FACTOR*Math.random();
+            this.clockArray[ID] -= this.FIRE_CYCLE*this.CONFUSION_FACTOR*Math.random();
             this.clockArray[ID] = Math.max(0, this.clockArray[ID]);
 
             quickVec1.fromArray(this.posArray, ID * 3); // agent's position
@@ -219,6 +219,13 @@ class Agents{
     }
     setHunter(hunter){
         this.hunter = hunter;
+    }
+    desyncronize(){ 
+        for (let ID = 0; ID < this.count; ID++){
+        this.clockArray[ID] += 0.2*Math.random()*this.FIRE_CYCLE;
+        this.clockArray[ID] = Math.max(0, this.clockArray[ID]);
+        this.clockArray[ID] = Math.min(this.FIRE_CYCLE, this.clockArray[ID]);
+        }
     }
 }
 

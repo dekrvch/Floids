@@ -2,9 +2,9 @@
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
 <svg
-   width="140.66707mm"
-   height="190.33685mm"
-   viewBox="0 0 140.66707 190.33685"
+   width="5.5380707in"
+   height="4.222888in"
+   viewBox="0 0 140.667 107.26135"
    version="1.1"
    id="svg5"
    xml:space="preserve"
@@ -25,9 +25,9 @@
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="mm"
      showgrid="false"
-     inkscape:zoom="1.0255231"
-     inkscape:cx="349.5777"
-     inkscape:cy="512.42143"
+     inkscape:zoom="1.4503087"
+     inkscape:cx="270.63204"
+     inkscape:cy="189.27005"
      inkscape:window-width="1920"
      inkscape:window-height="1001"
      inkscape:window-x="-9"
@@ -39,29 +39,29 @@
        xlink:href="#linearGradient10811"
        id="linearGradient7034"
        gradientUnits="userSpaceOnUse"
-       gradientTransform="matrix(1.3728001,0,0,1.1339176,234.86871,-106.01184)"
+       gradientTransform="matrix(0.77362007,0,0,1.1339176,103.28136,1.057498)"
        x1="-148.13513"
        y1="-30.283791"
        x2="-9.486496"
        y2="-30.283791" /><linearGradient
        inkscape:collect="always"
        id="linearGradient10811"><stop
-         style="stop-color:#191b23;stop-opacity:1;"
+         style="stop-color:#202032;stop-opacity:1;"
          offset="0"
          id="stop10807" /><stop
-         style="stop-color:#3d3964;stop-opacity:1;"
+         style="stop-color:#2c314e;stop-opacity:1;"
          offset="1"
          id="stop10809" /></linearGradient></defs><g
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1"
-     transform="translate(210.68468,221.84565)"><rect
-       style="fill:url(#linearGradient7034);fill-opacity:1;fill-rule:evenodd;stroke-width:0.330107"
+     transform="translate(103.61533,95.942421)"><rect
+       style="fill:url(#linearGradient7034);fill-opacity:1;fill-rule:evenodd;stroke-width:0.247808"
        id="rect300-9-1"
-       width="190.33685"
+       width="107.26136"
        height="140.66707"
-       x="31.508799"
-       y="-210.68468"
+       x="-11.318939"
+       y="-103.61533"
        rx="1"
        ry="1"
        transform="rotate(-90)" /></g></svg>
