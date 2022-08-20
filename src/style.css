@@ -24,6 +24,8 @@ body {
     position: fixed;
     width: 100%;
     height: 100%;
+    left: auto; 
+    right: 0;
 }
 
 #text{
@@ -83,6 +85,14 @@ mark {
 }
 .dg .c input[type=checkbox] {
     accent-color: #51b574 !important;
+}
+#gui {
+  position: absolute !important;
+  top: 0px !important;
+  bottom: auto !important;
+  left: 0px !important;
+  right: auto !important;
+  height: 100% !important; 
 }
 #stats {
   position: absolute !important;

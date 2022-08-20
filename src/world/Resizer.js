@@ -1,12 +1,35 @@
 import {WebGLRenderer} from 'three';
 const setSize = (container, camera, renderer) => {    
-    camera.setViewOffset(window.innerWidth , window.innerHeight,
-        -0.19*window.innerWidth, 0, window.innerWidth , window.innerHeight)
+    // let signature = document.getElementById("signature");
+    // signature.parentElement.insertBefore(container, signature);
+    // container.style.position = "relative";
+    // container.style.height = window.innerHeight + "px";
+    // console.log(container.style);
 
-    camera.aspect = window.innerWidth / window.innerHeight;
+    // camera.setViewOffset(container.clientWidth , container.clientHeight,
+    //     -0.19*container.clientWidth, 0, container.clientWidth , container.clientHeight);
+
+    let text = document.getElementById("text");
+    text.style.width = "95%";
+
+    let signature = document.getElementById("signature");
+    signature.parentNode.insertBefore(container, signature);
+
+
+    container.style.position = "relative";
+    container.style.height = window.innerHeight+"px";
+    container.style.borderTop = "5px solid red";
+
+
+    camera.setViewOffset(container.clientWidth , container.clientHeight,
+        0, 0, container.clientWidth , container.clientHeight);
+    camera.position.set(0, 0, 3);
+    
+
+    camera.aspect = container.clientWidth / container.clientHeight;
     camera.updateProjectionMatrix(); // update the camera's frustum
     renderer.setPixelRatio(window.devicePixelRatio);
-    renderer.setSize(window.innerWidth, window.innerHeight);
+    renderer.setSize(container.clientWidth, container.clientHeight);
     
 }
 
