@@ -21,16 +21,17 @@ body {
   width: 100%;
   height: 100%;
   background-color: black;
-  opacity: 0.5;
+  opacity: 0.6;
   vertical-align: middle;
   z-index: 2;
   visibility: hidden;
 }
 #rotateMessage p{
-  margin-top: 45vh;
+  margin-top: 40vh;
   font-size: 36pt;
+  color: white;
 }
-@media screen and (orientation:portrait)
+@media screen and (orientation:horizontal)
 {
   #rotateMessage{
     visibility: visible;
