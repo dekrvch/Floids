@@ -25,7 +25,7 @@ import { RenderPass } from 'three/examples/jsm/postprocessing/RenderPass.js';
 import { UnrealBloomPass } from 'three/examples/jsm/postprocessing/UnrealBloomPass.js';
 
 import * as dat from 'dat.gui'
-const gui = new dat.GUI()
+const gui = new dat.GUI();
 
 import { Agents } from './Agents';
 import { Hunter } from './Hunter';
@@ -44,7 +44,6 @@ class World{
         scene = new Scene();
         const loader = new TextureLoader();
         let backgroundTexture = loader.load('https://raw.githubusercontent.com/dekrvch/Floids/main/src/assets/background.svg');
-        scene.background = new Color("#22dd00");
         scene.background = backgroundTexture;
         // Camera
         camera = new PerspectiveCamera(
@@ -56,7 +55,7 @@ class World{
         camera.position.set(0, 0, 2.2);
 
         // Renderer
-        renderer = new WebGLRenderer({ antialias: false});
+        renderer = new WebGLRenderer({ antialias: false,  alpha: true });
 
         container.append(renderer.domElement);
         // Orbit Controls
@@ -71,18 +70,17 @@ class World{
             controls.update();
         }
         updatables.push(controls);
-        // Resizer
-        const resizer = new Resizer(container, camera, renderer);
         // Clock
         clock = new Clock;
         // FPS meter
         stats = new Stats();
-        stats.dom.style.left = null;
-        stats.dom.style.right = 0;
-        stats.dom.style.top = null;
-        stats.dom.style.bottom = 0;
+
         stats.showPanel( 0 ); // 0: fps, 1: ms, 2: mb, 3+: custom
         container.appendChild(stats.domElement);
+        stats.domElement.id = "stats";
+
+        // Resizer
+        const resizer = new Resizer(container, camera, renderer);
 
         // Objects
         let agents = new Agents(700);
