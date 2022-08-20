@@ -1,1 +1,0 @@
-import pleaseRotate from"please-rotate";import"./style.css";import{World}from"./World/World.js";function main(){pleaseRotate.run();const e=document.querySelector("#scene-container");new World(e).start()}main();
