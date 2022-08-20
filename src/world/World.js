@@ -40,11 +40,11 @@ let clock, stats;
 class World{
     constructor(container) {
         updatables = [];
-
         // Scene
         scene = new Scene();
         const loader = new TextureLoader();
-        let backgroundTexture = loader.load('http://172.26.48.1:8082/background.svg');
+        let backgroundTexture = loader.load('https://raw.githubusercontent.com/dekrvch/Floids/main/src/assets/background.svg');
+        scene.background = new Color("#22dd00");
         scene.background = backgroundTexture;
         // Camera
         camera = new PerspectiveCamera(
@@ -54,11 +54,9 @@ class World{
             100, // far clipping plane
         );
         camera.position.set(0, 0, 2.2);
-        camera.setViewOffset(window.innerWidth , window.innerHeight,
-            -0.15*window.innerWidth, 0, window.innerWidth , window.innerHeight)
 
         // Renderer
-        renderer = new WebGLRenderer({ antialias: true});
+        renderer = new WebGLRenderer({ antialias: false});
 
         container.append(renderer.domElement);
         // Orbit Controls
@@ -120,7 +118,6 @@ class World{
         hunterFolder.add(hunter, 'CHASE_FACTOR', 0, 0.8).step(0.1).name("Chasing");
         hunterFolder.add(agents, 'FLEE_FACTOR', 0, 10).step(0.1).name("Fleeing");
         hunterFolder.add(agents, 'CONFUSION_FACTOR', 0, 0.5).step(0.005).name("Confusion");
-
     }
 
     start(){

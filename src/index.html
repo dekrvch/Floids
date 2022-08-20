@@ -12,7 +12,7 @@
     <!-- Our <canvas> will be inserted here -->
 </div>
 
-<div class="text">
+<div id="text">
     <p>
     <h1>Floids</h1>
     <marK>Self-organization</marK> is a fascinating concept.
@@ -49,7 +49,7 @@
          More information on firefly algorithms can be found in 
          <a href="https://doi.org/10.1007/978-3-319-68109-2_3">this paper</a>.
         <br>
-        <img src="http://172.26.48.1:8082/firing.svg" width="80%">
+        <img src="https://raw.githubusercontent.com/dekrvch/Floids/main/src/assets/firing.svg" width="80%">
         <br>
         When experimenting with the algorithm implementation,
          I observed the best results when the fireflies nudge their clock proportionally
@@ -72,7 +72,7 @@
          the green arrows are the velocity, and the white arrow is the resulting force. 
          Subjected to these forces, floids change their velocity according to Newton's second law. 
         <br>
-        <img src="http://172.26.48.1:8082/flocking.svg" width="80%">
+        <img src="https://raw.githubusercontent.com/dekrvch/Floids/main/src/assets/flocking.svg" width="80%">
         <br>
         <mark>Coherence</mark> moves the floid towards the center of mass of its neighbors.
          <mark>Alignment</mark> moves the floid towards the average heading of its neighbors.
@@ -88,12 +88,12 @@
      The floids in this range start panicking and <mark>flee</mark> away.
      They also cannot keep track of time and mess up the internal clock (<mark>confusion</mark>).
     <br>
-    <img src="http://172.26.48.1:8082/hunting.svg" width="80%">
+    <img src="https://raw.githubusercontent.com/dekrvch/Floids/main/src/assets/hunting.svg" width="80%">
     <br>
     You can play with the corresponding parameters in the <i>Hunter panel</i>.
     You can decrease its aggressiveness or even disable it altogether to bring perfect harmony and peace into this little world.
 
-    <div class="signature">
+    <div id="signature">
         <p>
             <i>Created by Dmitry E. Kravchenko   </i>         
             <br>

@@ -1,8 +1,19 @@
+import {WebGLRenderer} from 'three';
+
 const setSize = (container, camera, renderer) => {
-    camera.aspect = container.clientWidth / container.clientHeight;
+    let landscape = (window.innerWidth > window.innerHeight);
+    let text = document.getElementById("text");
+    text.style.width = landscape ? "40%" : "100%";
+    
+    camera.setViewOffset(window.innerWidth , window.innerHeight,
+        landscape? -0.19*window.innerWidth : 0,
+        0, window.innerWidth , window.innerHeight)
+
+    camera.aspect = window.innerWidth / window.innerHeight;
     camera.updateProjectionMatrix(); // update the camera's frustum
-    renderer.setSize(container.clientWidth, container.clientHeight);
     renderer.setPixelRatio(window.devicePixelRatio);
+    renderer.setSize(window.innerWidth, window.innerHeight);
+    
 }
 
 let initialAspect

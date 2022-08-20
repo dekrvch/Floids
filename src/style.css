@@ -2,6 +2,15 @@ body {
     /* remove margins and scroll bars */
     margin: 0;
 
+    /*
+      Set the container's background color to the same as the scene's
+      background to prevent flashing on load
+    */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: #282c45;
+    background-image: url(https://raw.githubusercontent.com/dekrvch/Floids/main/src/assets/background.svg);
+
     /* style text */
     text-align: center;
     font-size: 12px;
@@ -9,6 +18,7 @@ body {
 
     /* color text */
     color: #444;
+    
 }
 
 
@@ -18,14 +28,6 @@ body {
     position: fixed;
     width: 100%;
     height: 100%;
-
-    /*
-      Set the container's background color to the same as the scene's
-      background to prevent flashing on load
-    */
-    background-image: url(http://172.26.48.1:8082/background.svg);
-    background-size: cover;
-    background-repeat: no-repeat;
 }
 
 .dg.main .close-button {
@@ -34,9 +36,9 @@ body {
 
 
 
-.text{
+#text{
     position: absolute;
-    width: 38%;
+    width: 40%;
     height: auto;
     overflow: scroll;
     
@@ -70,11 +72,11 @@ mark {
   a {
     color: #5dcf84;
   }
-.text img{
+#text img{
     padding: 15px;
 }
 
-.signature{
+#signature{
     text-align: right;
     margin-top: 40pt;
 }

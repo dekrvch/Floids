@@ -24,7 +24,7 @@ function vertexShader() {
             intensity =  exp(-(clock-0.2)/(0.25*fireCycle));
         }
         vec4 mvPosition = modelViewMatrix * vec4( position, 1.0 );
-        gl_PointSize = size * ( 600.0 / length( mvPosition.xyz ) );
+        gl_PointSize = size  * ( 600.0 / length( mvPosition.xyz ) );
         gl_Position = projectionMatrix * mvPosition;
     }
   `
