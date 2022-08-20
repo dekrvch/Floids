@@ -9,7 +9,7 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     background-color: #282c45;
-    background-image: url(http://172.26.48.1:8082/background.svg);
+    background-image: url(https://raw.githubusercontent.com/dekrvch/Floids/main/src/assets/background.svg);
 
     /* style text */
     text-align: center;
@@ -36,7 +36,7 @@ body {
 
 
 
-.text{
+#text{
     position: absolute;
     width: 40%;
     height: auto;
@@ -72,11 +72,11 @@ mark {
   a {
     color: #5dcf84;
   }
-.text img{
+#text img{
     padding: 15px;
 }
 
-.signature{
+#signature{
     text-align: right;
     margin-top: 40pt;
 }
