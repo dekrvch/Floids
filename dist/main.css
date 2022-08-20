@@ -28,7 +28,7 @@ body {
 
 #text{
     position: relative;
-    width: 0%;
+    width: 40%;
     height: auto;
     overflow: scroll;
     
@@ -64,13 +64,8 @@ mark {
 #text img{
     padding: 15px;
 }
-hr{
-  margin-top: 50px;
-  border: 1px solid Gainsboro;
-  width: 50%;
-  visibility: hidden;
-}
 #signature{
+  width: 40%;
   position:relative;
   text-align: right;
   margin-top: 40pt;
@@ -88,6 +83,13 @@ hr{
 }
 .dg .c input[type=checkbox] {
     accent-color: #51b574 !important;
+}
+#stats {
+  position: absolute !important;
+  top: auto !important;
+  bottom: 0px !important;
+  left: auto !important;
+  right: 0px !important;
 }
 
 /*# sourceMappingURL=main.css.map*/
