@@ -88,12 +88,12 @@ mark {
 }
 #gui {
   position: absolute !important;
-  height: 100% !important;
-  left: 5% !important;
-  /* top: 0px !important;
+  /* height: 100% !important;
+  left: 5% !important; */
+  top: 0px !important;
   bottom: auto !important;
-  left: 0px !important;
-  right: auto !important;  */
+  left: auto !important;
+  right: 0px !important; 
 }
 #stats {
   position: absolute !important;
