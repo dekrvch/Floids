@@ -13,12 +13,16 @@ const setSize = (container, camera, renderer) => {
     text.style.width = "95%";
 
     let signature = document.getElementById("signature");
+    signature.style.width = "95%";
     signature.parentNode.insertBefore(container, signature);
 
-
     container.style.position = "relative";
-    container.style.height = window.innerHeight+"px";
-    container.style.borderTop = "5px solid red";
+    container.style.width = 0.85*window.innerWidth+"px";
+    container.style.height = 0.85*window.innerHeight+"px";
+    container.style.margin = 0.075*window.innerHeight+"px";
+    // container.style.left = 0.075*window.innerHeight+"px";
+    // container.style.bottom = 0.075*window.innerHeight+"px";
+    container.style.border = "2px solid #6f6a8e";
 
 
     camera.setViewOffset(container.clientWidth , container.clientHeight,
