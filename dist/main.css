@@ -1,7 +1,6 @@
 body {
     /* remove margins and scroll bars */
     margin: 0;
-    overflow: hidden;
 
     /* style text */
     text-align: center;
@@ -24,13 +23,23 @@ body {
       Set the container's background color to the same as the scene's
       background to prevent flashing on load
     */
-    background-color: #252C38;
+    background-image: url(http://172.26.48.1:8082/background.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
 }
+
+.dg.main .close-button {
+    background-color: rgb(255, 0, 255);
+  }
+
+
 
 .text{
     position: absolute;
     width: 38%;
     height: auto;
+    overflow: scroll;
+    
     margin: 20pt;
     text-align: left;
     text-justify: inter-word;
@@ -43,8 +52,44 @@ body {
     font-size: 10pt;
     line-height: 1.7;
 }
+h1 {
+    font-weight: bold;
+    font-size: 48px;
+    letter-spacing: 5px;
+    margin-bottom: 0px;
+  }
+  h2 {
+    letter-spacing: 2px;
+    margin-top: 20px;
+    margin-bottom: 0px;
+  }  
+mark {
+    background-color: transparent;
+    color: #ffabbd;
+  }
+  a {
+    color: #5dcf84;
+  }
 .text img{
     padding: 15px;
+}
+
+.signature{
+    text-align: right;
+    margin-top: 40pt;
+}
+.fa-brands{
+    letter-spacing: 7pt;
+}
+
+.dg .c .slider-fg {
+    background: #51b574 !important;
+}
+.dg .cr.number input[type=text] {
+    color: #51b574 !important;
+}
+.dg .c input[type=checkbox] {
+    accent-color: #51b574 !important;
 }
 
 /*# sourceMappingURL=main.css.map*/
