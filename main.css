@@ -6,18 +6,13 @@ body {
       Set the container's background color to the same as the scene's
       background to prevent flashing on load
     */
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-color: #282c45;
-    background-image: url(https://raw.githubusercontent.com/dekrvch/Floids/main/src/assets/background.svg);
+    background-color: #2c314e;
 
     /* style text */
     text-align: center;
     font-size: 12px;
     font-family: Sans-Serif;
-
-    /* color text */
-    color: #444;
+    color: Gainsboro;
     
 }
 
@@ -25,27 +20,21 @@ body {
 
 #scene-container {
     /* tell our scene container to take up the full page */
+    margin: 0pt;
     position: fixed;
     width: 100%;
     height: 100%;
 }
 
-.dg.main .close-button {
-    background-color: rgb(255, 0, 255);
-  }
-
-
-
 #text{
-    position: absolute;
-    width: 40%;
+    position: relative;
+    width: 0%;
     height: auto;
     overflow: scroll;
     
-    margin: 20pt;
+    margin-left: 20pt;
     text-align: left;
     text-justify: inter-word;
-    color: Gainsboro;
 
     overflow-x: hidden;
     overflow-y: auto;
@@ -75,10 +64,17 @@ mark {
 #text img{
     padding: 15px;
 }
-
+hr{
+  margin-top: 50px;
+  border: 1px solid Gainsboro;
+  width: 50%;
+  visibility: hidden;
+}
 #signature{
-    text-align: right;
-    margin-top: 40pt;
+  position:relative;
+  text-align: right;
+  margin-top: 40pt;
+  line-height: 15pt;
 }
 .fa-brands{
     letter-spacing: 7pt;
