@@ -13,6 +13,7 @@ body {
     font-size: 12px;
     font-family: Sans-Serif;
     color: Gainsboro;
+    overflow: auto;
     
 }
 
@@ -31,7 +32,7 @@ body {
   font-size: 36pt;
   color: white;
 }
-@media screen and (orientation:horizontal)
+@media screen and (orientation:portrait)
 {
   #rotateMessage{
     visibility: visible;
