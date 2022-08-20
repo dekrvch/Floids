@@ -10,16 +10,16 @@ const setSize = (container, camera, renderer) => {
     //     -0.19*container.clientWidth, 0, container.clientWidth , container.clientHeight);
 
     let text = document.getElementById("text");
-    text.style.width = "95%";
+    text.style.width = "85%";
 
     let signature = document.getElementById("signature");
     signature.style.width = "95%";
     signature.parentNode.insertBefore(container, signature);
 
     container.style.position = "relative";
-    container.style.width = 0.85*window.innerWidth+"px";
-    container.style.height = 0.85*window.innerHeight+"px";
-    container.style.margin = 0.075*window.innerHeight+"px";
+    container.style.width = 0.85*document,clientWidth+"px";
+    container.style.height = 0.85*document.clientHeight+"px";
+    container.style.margin = 0.075*document.clientWidth+"px";
     // container.style.left = 0.075*window.innerHeight+"px";
     // container.style.bottom = 0.075*window.innerHeight+"px";
     container.style.border = "2px solid #6f6a8e";
