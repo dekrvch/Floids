@@ -6,6 +6,17 @@
     <title>Floids</title>
     <script type="module" src="main.js"></script>
     <script src="https://kit.fontawesome.com/0380fed17d.js" crossorigin="anonymous"></script>    
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-1RDLK783P7"></script>
+    <script>
+        if ( location.hostname !== "192.168.1.61"){
+            console.log("Not a local host");
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-1RDLK783P7');
+        }
+    </script>
     
 </head>
 <body>
@@ -79,7 +90,7 @@
          where each agent (generally called boids, here floids) follows three rules describing 
          coherence, alignment, and avoidance. These rules are illustrated in the figure below. 
          The filled red circle is the <mark>visibility radius</mark> of a given floid (bigger for coherence and alignment),
-         the green arrows are the neighbor’s velocities, and the red arrow is the resulting force.
+         the green arrows are the neighbor’s velocities (matter for alignment), and the red arrow is the resulting force.
          Subjected to these forces, floids change their velocity according to Newton's second law.
         <br>
         <img src="https://raw.githubusercontent.com/dekrvch/Floids/main/src/assets/flocking.svg" width="80%">
@@ -94,9 +105,9 @@
     <h2>Hunter</h2>
     The emergence of self-organization is great, but it gets boring when floids bunch in a single flock
      and fully synchronize the clocks. To spicy things up, we can introduce a source of chaos – a hunter.
-     It is a special agent that <mark>chases</mark> the floids within its hunting range.
-     The floids in this range start panicking and <mark>flee</mark> away.
-     They also cannot keep track of time and mess up the internal clock (<mark>confusion</mark>).
+     It is a special agent that <mark>chases</mark> the floids within its <mark>hunting range</mark> (white circle on the figure).
+     When the hunter is in the visible radius of a floid, the latter panicks and <mark>flees</mark> away.
+     It also cannot keep track of time and messes up the internal clock (<mark>confusion</mark>).
     <br>
     <img src="https://raw.githubusercontent.com/dekrvch/Floids/main/src/assets/hunting.svg" width="80%">
     <br>

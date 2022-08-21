@@ -21,7 +21,7 @@ body {
 #rotateMessage{
   position: fixed;
   width: 100%;
-  height: 100%;
+  height: 80%;
   background-color: black;
   opacity: 0.6;
   vertical-align: middle;
@@ -29,7 +29,7 @@ body {
   visibility: hidden;
 }
 #rotateMessage p{
-  margin-top: 30vh;
+  margin-top: 35vh;
   font-size: 36pt;
   color: white;
 }
