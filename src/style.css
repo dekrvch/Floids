@@ -17,6 +17,7 @@ body {
     
 }
 
+/* Show message to ask user to rotate the phone */
 #rotateMessage{
   position: fixed;
   width: 100%;
@@ -38,6 +39,7 @@ body {
     visibility: visible;
   }
 }
+
 
 #scene-container {
     /* tell our scene container to take up the full page */
