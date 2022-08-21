@@ -1,16 +1,14 @@
 import {
     BufferAttribute,
     BufferGeometry, Color,
-    DynamicDrawUsage, NormalBlending, AdditiveBlending, MultiplyBlending,
+    DynamicDrawUsage, AdditiveBlending,
     Points,
-    PointsMaterial,
-    ShaderMaterial, TextureLoader,
-    Vector3, Vector2,
-    UniformsLib
+    ShaderMaterial, 
+    Vector3,
 } from 'three';
 import {UnitGrid} from "./Grid";
 import {pointInSphere} from "../pointInSphere";
-import { vertexShader, fragmentShader } from '../shaders'
+import { vertexShader, fragmentShader } from '../assets/shaders'
 
 // Vectors used to assist the calculations
 let posVec = new Vector3;
@@ -64,12 +62,12 @@ class Agents{
             fireCycle:      {value: this.FIRE_CYCLE},
             size:           { value: 0.4 },
             bodyColor:      { value: new Color(0x70ffa1)},
-            fireColor:      { value: new Color(0xff849f)},
-            bodySize:       { value: 0.03},
-            bodyOpacity:    { value: 0.5},
+            fireColor:      { value: new Color(0xff747b)},
+            bodySize:       { value: 0.05},
+            bodyOpacity:    { value: 0.2},
             fireR1: {value : 0.015},
             fireR2: {value : 0.0015},
-            aspect: {value: 1}
+            aspect: {value: 1.0}
         }
         let shaderMaterial =  new ShaderMaterial({
             uniforms: this.uniforms,
@@ -222,9 +220,7 @@ class Agents{
     }
     desyncronize(){ 
         for (let ID = 0; ID < this.count; ID++){
-        this.clockArray[ID] += 0.2*Math.random()*this.FIRE_CYCLE;
-        this.clockArray[ID] = Math.max(0, this.clockArray[ID]);
-        this.clockArray[ID] = Math.min(this.FIRE_CYCLE, this.clockArray[ID]);
+        this.clockArray[ID] = Math.random()*this.FIRE_CYCLE;
         }
     }
 }

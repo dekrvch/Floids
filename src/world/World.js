@@ -99,7 +99,6 @@ class World{
         composer.addPass( bloomPass );
         
         // GUI
-        container.appendChild(gui.domElement);
         const firingFolder = gui.addFolder('Firing')
         firingFolder.add(agents, 'FIRE_CYCLE', 0.5, 5).step(0.1).name("Cycle");
         firingFolder.add(agents, 'NUDGE_FACTOR', 0, 0.03).step(0.003).name("Nudging");
