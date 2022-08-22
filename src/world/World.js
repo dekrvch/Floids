@@ -56,7 +56,7 @@ class World{
         camera.position.set(0, 0, 2.2);
 
         // Renderer
-        renderer = new WebGLRenderer({ antialias: false,  alpha: true });
+        renderer = new WebGLRenderer({ antialias: true,  alpha: true });
 
         container.append(renderer.domElement);
         // Orbit Controls
