@@ -39,6 +39,12 @@ body {
     visibility: visible;
   }
 }
+@media screen and (orientation:portrait)
+{
+  #rotateMessage{
+    visibility: hidden;
+  }
+}
 
 
 #scene-container {
