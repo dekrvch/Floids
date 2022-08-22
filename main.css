@@ -83,7 +83,7 @@ mark {
   z-index: 1;
   text-align: left;
   left: 10pt;
-  bottom: 5pt; 
+  bottom: 10pt; 
   visibility: hidden;
 }
 
@@ -126,9 +126,9 @@ mark {
 #stats {
   position: fixed !important;
   top: auto !important;
-  bottom: 0px !important;
+  bottom: 10pt !important;
   left: auto !important;
-  right: 0px !important;
+  right: 0pt !important;
 }
 
 /*# sourceMappingURL=main.css.map*/
