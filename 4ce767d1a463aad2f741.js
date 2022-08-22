@@ -1,0 +1,1 @@
+import"./style.css";import{World}from"./World/World.js";function main(){const e=document.querySelector("#scene-container");new World(e).start();const t=document.getElementById("rotateMessage");t.onclick=e=>{t.style.visibility="hidden"}}main();
