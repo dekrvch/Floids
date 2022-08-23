@@ -60,7 +60,7 @@ class Agents{
         //Shaders
         this.uniforms = {
             fireCycle:      {value: this.FIRE_CYCLE},
-            size:           { value: 0.4 },
+            size:           { value: 0.35*window.devicePixelRatio },
             bodyColor:      { value: new Color(0x70ffa1)},
             fireColor:      { value: new Color(0xff747b)},
             bodySize:       { value: 0.05},
@@ -91,6 +91,7 @@ class Agents{
      * Update position and velocity of the agents
      * @delta time elapsed since last frame
     **/
+   
     tick(delta){
         // Find neighbors within the visible radius
         let neighborsPerID = this.grid.getDistancesSq(this.posArray, this.VISIBLE_RADIUS, this.USE_GRID);

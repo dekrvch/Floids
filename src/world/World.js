@@ -6,15 +6,7 @@ import {
     Clock,
     Vector2,
     Vector3,
-    TextureLoader,
-    WebGLRenderTarget,
-    LinearFilter,
-    RGBAFormat,
-    sRGBEncoding,
-    Fog,
-    PlaneBufferGeometry,
-    PlaneGeometry,
-    MeshBasicMaterial, Mesh
+    TextureLoader
 } from 'three';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js'
 import { Resizer } from "./Resizer";
@@ -90,20 +82,13 @@ class World{
         agents.setHunter(hunter);
         updatables.push(agents, hunter);
         scene.add(agents.mesh, hunter.mesh);
-
-        //Bloom pass
-        const renderScene = new RenderPass( scene, camera );
-        const bloomPass = new UnrealBloomPass(new Vector2( window.innerWidth, window.innerHeight ), 0.6, 0.7, 0.8 );
-        composer = new EffectComposer( renderer );
-        composer.addPass( renderScene );
-        composer.addPass( bloomPass );
         
         // GUI
         const firingFolder = gui.addFolder('Firing')
         firingFolder.add(agents, 'FIRE_CYCLE', 0.5, 5).step(0.1).name("Cycle");
         firingFolder.add(agents, 'NUDGE_FACTOR', 0, 0.03).step(0.003).name("Nudging");
-        firingFolder.add(agents.uniforms.fireR2, 'value', 0, 0.004).step(0.0005).name("Body fire");
-        firingFolder.add(agents.uniforms.fireR1, 'value', 0, 0.04).step(0.005).name("Diffused fire");
+        firingFolder.add(agents.uniforms.fireR2, 'value', 0, 0.006).step(0.0005).name("Body fire");
+        firingFolder.add(agents.uniforms.fireR1, 'value', 0, 0.06).step(0.005).name("Diffused fire");
         const desyncButton = { desync:function(){  agents.desyncronize(); }};
         firingFolder.add(desyncButton,'desync').name("Desyncronize");
         const flockingFolder = gui.addFolder('Flocking')
@@ -117,8 +102,21 @@ class World{
         hunterFolder.add(hunter, 'CHASE_FACTOR', 0, 0.8).step(0.1).name("Chasing");
         hunterFolder.add(agents, 'FLEE_FACTOR', 0, 10).step(0.1).name("Fleeing");
         hunterFolder.add(agents, 'CONFUSION_FACTOR', 0, 0.5).step(0.005).name("Confusion");
+        let textParam = {show: false};
+        let textCheckBox = gui.add(textParam, "show").name("Show Explanation").onChange((show) => {
+            document.getElementById("text").style.visibility = show ? "visible" : "hidden";
+            document.getElementById("text").style.height = show ? "auto" : "0";
+            document.getElementById("signature").style.visibility = show ? "visible" : "hidden";
+            document.getElementById("rotateMessage").style.visibility = show ? "hidden" : "visible";
+        });
+        textCheckBox.domElement.parentNode.parentNode.id = "textCheckBox";
+        //Bloom pass
+        const renderScene = new RenderPass( scene, camera );
+        const bloomPass = new UnrealBloomPass(new Vector2( window.innerWidth, window.innerHeight ), 0.6, 0.7, 0.8 );
+        composer = new EffectComposer( renderer );
+        composer.addPass( renderScene );
+        composer.addPass( bloomPass );
     }
-
     start(){
         renderer.setAnimationLoop(_ => {
             this.tick();

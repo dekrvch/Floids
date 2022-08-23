@@ -17,29 +17,6 @@ body {
     
 }
 
-/* Show message to ask user to rotate the phone */
-#rotateMessage{
-  position: fixed;
-  width: 100%;
-  height: 120%;
-  background-color: black;
-  opacity: 0.6;
-  vertical-align: middle;
-  z-index: 2;
-  visibility: hidden;
-}
-#rotateMessage p{
-  margin-top: 35vh;
-  font-size: 36pt;
-  color: white;
-}
-@media screen and (orientation:portrait)
-{
-  #rotateMessage{
-    visibility: visible;
-  }
-}
-
 
 #scene-container {
     /* tell our scene container to take up the full page */
@@ -56,6 +33,7 @@ body {
     width: 40%;
     height: auto;
     overflow: scroll;
+    visibility: visible;
     
     margin-left: 20pt;
     text-align: left;
@@ -68,6 +46,7 @@ body {
     font-size: 10pt;
     line-height: 1.7;
 }
+
 h1 {
     font-weight: bold;
     font-size: 48px;
@@ -92,10 +71,39 @@ mark {
 #signature{
   width: 40%;
   position:relative;
+  visibility: visible;
+
   text-align: right;
   margin-top: 40pt;
+  margin-bottom: 10pt;
   line-height: 15pt;
 }
+
+#rotateMessage{
+  position: fixed;
+  z-index: 1;
+  text-align: left;
+  left: 10pt;
+  bottom: 10pt; 
+  visibility: hidden;
+}
+
+@media screen and (orientation:portrait)
+{
+  #text{
+    visibility: hidden;
+    width: 85%;
+    height: 0;
+  }
+  #signature{
+    visibility: hidden;
+    width: 95%;
+  }
+  #rotateMessage{
+    visibility: visible;
+  }
+}
+
 .fa-brands{
     letter-spacing: 7pt;
 }
@@ -119,9 +127,9 @@ mark {
   right: 0px !important; 
 }
 #stats {
-  position: absolute !important;
+  position: fixed !important;
   top: auto !important;
-  bottom: 0px !important;
+  bottom: 10pt !important;
   left: auto !important;
-  right: 0px !important;
+  right: 0pt !important;
 }
