@@ -75,6 +75,7 @@ mark {
 
   text-align: right;
   margin-top: 40pt;
+  margin-bottom: 10pt;
   line-height: 15pt;
 }
 
@@ -91,10 +92,12 @@ mark {
 {
   #text{
     visibility: hidden;
+    width: 85%;
     height: 0;
   }
   #signature{
     visibility: hidden;
+    width: 95%;
   }
   #rotateMessage{
     visibility: visible;
